@@ -12,7 +12,7 @@ function usePlanets() {
 
   useEffect(() => {
     getPlanets();
-  }, [getPlanets]);
+  }, [getPlanets]); 
 
   return planets;
 }
