@@ -1,0 +1,27 @@
+{
+  "name": "mission-exo-float",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "install-server": "npm install --prefix server",
+    "install-client": "npm install --prefix server",
+    "install": "npm install-server && npm install-client",
+    "server": "npm run watch --prefix server",
+    "client": "npm start --prefix client",
+    "watch": "npm run client & npm run server",
+    "deploy": "npm run build --prefix client  && npm start --prefix server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shreya0204/Mission-Exo-Float.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shreya0204/Mission-Exo-Float/issues"
+  },
+  "homepage": "https://github.com/shreya0204/Mission-Exo-Float#readme"
+}
