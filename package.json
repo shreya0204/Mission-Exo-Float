@@ -23,5 +23,8 @@
   "bugs": {
     "url": "https://github.com/shreya0204/Mission-Exo-Float/issues"
   },
-  "homepage": "https://github.com/shreya0204/Mission-Exo-Float#readme"
+  "homepage": "https://github.com/shreya0204/Mission-Exo-Float#readme",
+  "dependencies": {
+    "nodemon": "^2.0.15"
+  }
 }
