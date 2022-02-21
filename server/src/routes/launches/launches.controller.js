@@ -1,5 +1,4 @@
-const launchesRouter = require('./launches.router');
-const {getAllLaunches, addNewLauch} = require('../../models/launches.model');
+const {existsLaunchWithId, getAllLaunches, addNewLauch,abortLaunchById} = require('../../models/launches.model');
 
 
 // Array.from changing the launches object in the format of json to sen it to api tat can be used in the frontend application.
@@ -33,4 +32,19 @@ function httpAddNewLaunch(req, res){
 
 }
 
-module.exports = {httpGetAllLaunches, httpAddNewLaunch};
+function httpAbortLaunch(req, res){
+    try {
+        const launchId = +req.params.id;
+        if(!existsLaunchWithId(launchId)){
+            return res.status(404).json({
+                message : "Launch not found"
+            })
+        }
+        const aborted  = abortLaunchById(launchId);
+        return res.status(200).json(aborted);
+    } catch (error) {
+        
+    }
+}
+
+module.exports = {httpGetAllLaunches, httpAddNewLaunch, httpAbortLaunch};
